@@ -1,0 +1,20 @@
+body {
+		background-color: #fefefe;
+	}
+
+.tile {
+	width: 97vw;
+	height: 90vh;
+	background-color: #0000ff;
+	opacity: 0.8;
+	margin: 10px;
+	transition: opacity 0.5s;
+	background-image: url(https://pbs.twimg.com/media/CsZFxU1WAAAQkLR.jpg:large);
+	background-position: center;
+	background-size: cover;
+}
+
+.tile:hover {
+	opacity: 1;
+	transition: opacity 0.3s;
+}
