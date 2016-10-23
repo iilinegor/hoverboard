@@ -38,7 +38,7 @@
 
 	    ar = numbers.matrix.multiply(xrot, yrot);
 	    // console.log(ar);
-	    console.log(ar[0][1]);
+	    // console.log(ar[0][1]);
 
 	    p.style = " transform: matrix3d(" +
 	    ar[0][0] + "," + ar[0][1] + "," + ar[0][2] + "," + 0 + ","+
