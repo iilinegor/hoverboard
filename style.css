@@ -23,9 +23,9 @@ body {
 .tile {
 	width: 97vw;
 	height: 95vh;
-	background-color: #0000ff;
+	/*background-color: #0000ff;*/
 	margin: 10px;
-	background-image: url(https://pbs.twimg.com/media/CvS_EE7XYAEFC_E.jpg:large);
+	/*background-image: url(https://pbs.twimg.com/media/CvS_EE7XYAEFC_E.jpg:large);*/
 	background-position: center;
 	background-size: cover;
 	transform-style: preserve-3d;
@@ -41,7 +41,7 @@ body {
 	font-size: 50px;
 	text-align: center;
 	font-weight: bolder;
-	transform: translateZ(100px);
+	transform: translateZ(30px);
 	transition: all 3s;
 	padding: 200px;
 	text-shadow: 1px 1px 20px black;
