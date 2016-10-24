@@ -14,25 +14,25 @@
 	<style>
 		.swiper-container {
 		    width: 100%;
-		    height: 47vh;
+		    height: 48vh;
 		}
 
-		.swiper-slide {
+		.swiper-container .swiper-slide {
 
 			background-image: url(https://pbs.twimg.com/media/Cvb0NgqXgAQ1fRq.jpg:large);
-			background-position: top;
-			background-size: cover;
+			background-position: top ;
+			background-size: auto 200%;
 
 		} 
 
 		.swiper-container1 {
 		    width: 100%;
-		    height: 50vh;
+		    height: 48vh;
 		}
 
 		.swiper-container1 .swiper-slide {
-			background-position: bottom;
-			background-size: cover;
+			background-position: bottom ;
+			background-size: auto 200%;
 		}
 		
 		#slide1 {
@@ -58,7 +58,7 @@
 	<div id="xy"></div>
 	<div class="tile" id="tile"> 
 			<div class="swiper-container">
-			    <!-- Additional required wrapper -->
+
 			    <div class="swiper-wrapper">
 			        <!-- Slides -->
 			        <div class="swiper-slide" id="slide1">
@@ -84,17 +84,11 @@
 			    </div>
 			    <!-- If we need pagination -->
 			    <div class="swiper-pagination"></div>
-			    
-			    <!-- If we need navigation buttons  -->
-		<!-- 	    <div class="swiper-button-prev"></div>
-			    <div class="swiper-button-next"></div> -->
-			    
-			 <!--     If we need scrollbar
-			<div class="swiper-scrollbar"></div>  -->
+
 			</div>
 
 			<div class="swiper-container1">
-			    <!-- Additional required wrapper -->
+
 			    <div class="swiper-wrapper">
 			        <!-- Slides -->
 			        <div class="swiper-slide" id="slide1">
@@ -118,15 +112,6 @@
 						</div>
 					</div>
 			    </div>
-			    <!-- If we need pagination -->
-			    <!-- <div class="swiper-pagination"></div> -->
-			    
-			    <!-- If we need navigation buttons -->
-			    <!-- <div class="swiper-button-prev"></div> -->
-			    <!-- <div class="swiper-button-next"></div> -->
-			    
-			    <!-- If we need scrollbar -->
-			    <!-- <div class="swiper-scrollbar"></div> -->
 			</div>
 	</div>
 
@@ -172,22 +157,13 @@ function eq1(){
     // Optional parameters
     direction: 'vertical',
     speed: 500,
-    // pagination: '.swiper-pagination',
-    
-    // If we need pagination
-    // pagination: '.swiper-pagination',
-    
-    // Navigation arrows
-    // nextButton: '.swiper-button-next',
-    // prevButton: '.swiper-button-prev',
+
     mousewheelControl: true,
     keyboardControl: true,
     loop: false,
     effect: "cube",
     onSlideChangeEnd: eq1,
-    
-    // And if we need scrollbar
-    // scrollbar: '.swiper-scrollbar',
+
   });  
   </script>
 
