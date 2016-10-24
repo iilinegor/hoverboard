@@ -3,7 +3,8 @@ body {
 		padding: 0px;
 		margin: 0px;
 		background-color: #330077;
-		font-family: "Arial"
+		font-family: "Arial";
+		overflow: hidden;
 }
 
 #xy {
@@ -29,9 +30,9 @@ body {
 	background-position: center;
 	background-size: cover;
 	transform-style: preserve-3d;
-	transition: all 0.2s linear; 
+	transition: all 0.1s linear; 
 	transform-origin: center 50% 0px;
-	box-shadow: 0px 0px 50px black;
+	/*box-shadow: 0px 0px 50px black;*/
 
 }
 

@@ -34,6 +34,22 @@
 			background-position: bottom;
 			background-size: cover;
 		}
+		
+		#slide1 {
+			background-image: url(https://pbs.twimg.com/media/Cvb0NgqXgAQ1fRq.jpg:large);
+		}
+
+		#slide2 {
+			background-image: url(http://s1.hostingkartinok.com/uploads/images/2014/06/694ea914eba8a6cc8ecb2ea27f969111.jpg);
+		}
+
+		#slide3 {
+			background-image: url(http://www.setwalls.ru/pic/201304/1920x1080/setwalls.ru-18179.jpg);
+		}
+
+		#slide4 {
+			background-image: url(http://cdn.wallpapersafari.com/46/96/Lbi1qG.jpg);
+		}
  
 	</style>
 </head>
@@ -45,22 +61,22 @@
 			    <!-- Additional required wrapper -->
 			    <div class="swiper-wrapper">
 			        <!-- Slides -->
-			        <div class="swiper-slide">
+			        <div class="swiper-slide" id="slide1">
 						<div id="text">
 							Slide 1
 						</div>
 					</div>
-			        <div class="swiper-slide">
+			        <div class="swiper-slide" id="slide2">
 						<div id="text">
 							Slide 2
 						</div>
 					</div>
-			        <div class="swiper-slide">
+			        <div class="swiper-slide" id="slide3">
 						<div id="text">
 							Slide 3
 						</div>
 					</div>
-			        <div class="swiper-slide">
+			        <div class="swiper-slide" id="slide4">
 						<div id="text">
 							Slide 4
 						</div>
@@ -73,30 +89,30 @@
 		<!-- 	    <div class="swiper-button-prev"></div>
 			    <div class="swiper-button-next"></div> -->
 			    
-			    <!-- If we need scrollbar
-			    <!-- <div class="swiper-scrollbar"></div> -->
+			 <!--     If we need scrollbar
+			<div class="swiper-scrollbar"></div>  -->
 			</div>
 
 			<div class="swiper-container1">
 			    <!-- Additional required wrapper -->
 			    <div class="swiper-wrapper">
 			        <!-- Slides -->
-			        <div class="swiper-slide">
+			        <div class="swiper-slide" id="slide1">
 						<div id="text">
 							Slide 1
 						</div>
 					</div>
-			        <div class="swiper-slide">
+			        <div class="swiper-slide" id="slide2">
 						<div id="text">
 							Slide 2
 						</div>
 					</div>
-			        <div class="swiper-slide">
+			        <div class="swiper-slide" id="slide3">
 						<div id="text">
 							Slide 3
 						</div>
 					</div>
-			        <div class="swiper-slide">
+			        <div class="swiper-slide" id="slide4">
 						<div id="text">
 							Slide 4
 						</div>
@@ -122,22 +138,30 @@
 
 
 
-<script  type="text/javascript">        
+<script  type="text/javascript">    
+function eq(){
+	mySwiper1.slideTo(mySwiper.activeIndex, 400, function(){});
+};
+
+function eq1(){
+	mySwiper.slideTo(mySwiper1.activeIndex, 400, function(){});
+};
+
   var mySwiper = new Swiper ('.swiper-container', {
     // Optional parameters
     direction: 'vertical',
-    loop: true,
-    
+    speed: 500,
     // If we need pagination
     pagination: '.swiper-pagination',
     
     // Navigation arrows
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
-    // mousewheelControl: true,
+    // nextButton: '.swiper-button-next',
+    // prevButton: '.swiper-button-prev',
+    mousewheelControl: true,
     keyboardControl: true,
     loop: false,
     effect: "cube",
+    onSlideChangeEnd: eq,
     
     // And if we need scrollbar
     // scrollbar: '.swiper-scrollbar',
@@ -147,19 +171,20 @@
   var mySwiper1 = new Swiper ('.swiper-container1', {
     // Optional parameters
     direction: 'vertical',
-    loop: true,
+    speed: 500,
     // pagination: '.swiper-pagination',
     
     // If we need pagination
     // pagination: '.swiper-pagination',
     
     // Navigation arrows
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
-    // mousewheelControl: true,
+    // nextButton: '.swiper-button-next',
+    // prevButton: '.swiper-button-prev',
+    mousewheelControl: true,
     keyboardControl: true,
     loop: false,
     effect: "cube",
+    onSlideChangeEnd: eq1,
     
     // And if we need scrollbar
     // scrollbar: '.swiper-scrollbar',
