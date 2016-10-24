@@ -24,7 +24,8 @@ body {
 .tile {
 	width: 97vw;
 	height: 95vh;
-	margin: 10px;
+	margin: 10px auto;
+
 	/*background-image: url(https://pbs.twimg.com/media/CvS_EE7XYAEFC_E.jpg:large);*/
 	background-position: center;
 	background-size: cover;
