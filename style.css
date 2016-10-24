@@ -2,7 +2,7 @@ body {
 		background-color: #fefefe;
 		padding: 0px;
 		margin: 0px;
-		background-color: #330077;
+		background-color: #343454;
 		font-family: "Arial";
 		overflow: hidden;
 }
@@ -24,7 +24,6 @@ body {
 .tile {
 	width: 97vw;
 	height: 95vh;
-	/*background-color: #0000ff;*/
 	margin: 10px;
 	/*background-image: url(https://pbs.twimg.com/media/CvS_EE7XYAEFC_E.jpg:large);*/
 	background-position: center;
@@ -43,7 +42,7 @@ body {
 	text-align: center;
 	font-weight: bolder;
 	transform: translateZ(30px);
-	transition: all 3s;
+	/*transition: all 3s;*/
 	padding: 200px;
 	text-shadow: 1px 1px 20px black;
 }
