@@ -15,6 +15,7 @@
 		.swiper-container {
 		    width: 100%;
 		    height: 48vh;
+		    overflow: hidden;
 		}
 
 		.swiper-container .swiper-slide {
@@ -23,12 +24,12 @@
 			background-position: top ;
 			background-size: auto 200%;
 			background-color: #343454;
-
 		} 
 
 		.swiper-container1 {
 		    width: 100%;
 		    height: 48vh;
+		    overflow: hidden;
 		}
 
 		.swiper-container1 .swiper-slide {
@@ -128,7 +129,9 @@
 
 
 
-<script  type="text/javascript">    
+<script  type="text/javascript">  
+var prevSlide = 0;  
+var curSlide = 1;  
 function eq(){
 	mySwiper1.slideTo(mySwiper.activeIndex, 400, function(){});
 };
@@ -150,9 +153,9 @@ function eq1(){
     mousewheelControl: true,
     keyboardControl: true,
     loop: false,
-    effect: "cube",
-    onSlideChangeEnd: eq,
-    
+    effect: "coverflow",
+    onSlideChangeStart: eq,
+
     // And if we need scrollbar
     // scrollbar: '.swiper-scrollbar',
   });  
@@ -164,11 +167,10 @@ function eq1(){
     speed: 500,
 
     mousewheelControl: true,
-    keyboardControl: true,
+    // keyboardControl: true,
     loop: false,
-    effect: "cube",
-    onSlideChangeEnd: eq1,
-
+    effect: "coverflow",
+    onSlideChangeStart: eq1,
   });  
   </script>
 
