@@ -61,6 +61,8 @@ body {
 	background-size: auto 200%;
 	/*background-color: #343454;*/
 	backface-visibility: hidden;
+	background-repeat: no-repeat;
+
 } 
 
 .swiper-container1 {
@@ -73,6 +75,7 @@ body {
 	background-position: bottom ;
 	background-size: auto 200%;
 	backface-visibility: hidden;
+	background-repeat: no-repeat;
 }
 
 #slide1 {
