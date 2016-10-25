@@ -12,46 +12,50 @@
 
 
 	<style>
-		.swiper-container {
-		    width: 100%;
-		    height: 48vh;
-		    overflow: hidden;
+		.swiper-pagination {
+			position: absolute;
+			width: 100px;
+			top: 50px;
+			left: 10px;
 		}
 
-		.swiper-container .swiper-slide {
-
-			background-image: url(https://pbs.twimg.com/media/Cvb0NgqXgAQ1fRq.jpg:large);
-			background-position: top ;
-			background-size: auto 200%;
-			background-color: #343454;
-		} 
-
-		.swiper-container1 {
-		    width: 100%;
-		    height: 48vh;
-		    overflow: hidden;
+		.swiper-pagination-bullet-active {
+			width: 100px !important;
+			border-radius: 5px ;
+			background-color: #aeaeff !important;
+			transition: all 0.3s;
 		}
 
-		.swiper-container1 .swiper-slide {
-			background-position: bottom ;
-			background-size: auto 200%;
-			background-color: #343454;
-		}
-		
-		#slide1 {
-			background-image: url(http://i.imgur.com/d8fwfxf.png);
-		}
-
-		#slide2 {
-			background-image: url(http://s1.hostingkartinok.com/uploads/images/2014/06/694ea914eba8a6cc8ecb2ea27f969111.jpg);
+		.swiper-pagination-bullet {
+			display: block;
+			width: 10px;
+			border-radius: 5px;
+			background-color: #fefefe;
+			opacity: 0.6;
+			transition: all 0.3s;
+			text-align: right;
+			margin: 5px;
+			
 		}
 
-		#slide3 {
-			background-image: url(http://i.wp-b.com/media/2015-10-17/vBFEgMUvEc.jpg);
+		video{
+			position:fixed;
+			z-index:-1;
+			min-width:100%;
+			min-height:100%;
+			overflow:hidden;
 		}
 
-		#slide4 {
-			background-image: url(http://flashwallpapers.com/wp-content/uploads/2015/10/Evening-Reflections-1366x768.jpg);
+		#overlay{
+
+			position:fixed;
+			z-index:-1;
+			min-width:100%;
+			min-height:100%;
+			overflow:hidden;
+			/*background-color: #cc99ff;*/
+			background-color: #545474;
+			opacity: 0.6;
 		}
  
 	</style>
@@ -59,6 +63,13 @@
 <body>
 	<!-- <div id="overlay"></div> -->
 	<div id="xy"></div>
+
+<video autoplay loop muted>
+   <source src="./1.mp4" >
+</video>
+<div id="overlay"></div>
+
+    <div class="swiper-pagination"></div>
 	<div class="tile" id="tile"> 
 			<div class="swiper-container">
 
@@ -86,7 +97,6 @@
 					</div>
 			    </div>
 			    <!-- If we need pagination -->
-			    <div class="swiper-pagination"></div>
 
 			</div>
 
@@ -96,9 +106,6 @@
 			        <!-- Slides -->
 			        <div class="swiper-slide" id="slide1">
 						<div id="text">
-							<br/>
-							<br/>
-							<br/>
 							Slide 1
 						</div>
 					</div>
@@ -146,6 +153,7 @@ function eq1(){
     speed: 800,
     // If we need pagination
     pagination: '.swiper-pagination',
+    paginationClickable: true,
     
     // Navigation arrows
     // nextButton: '.swiper-button-next',
@@ -164,7 +172,7 @@ function eq1(){
   var mySwiper1 = new Swiper ('.swiper-container1', {
     // Optional parameters
     direction: 'vertical',
-    speed: 800,
+    speed: 700,
 
     mousewheelControl: true,
     // keyboardControl: true,

@@ -12,15 +12,6 @@ body {
 	display: none;
 }
 
-#overlay{
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	background-color: #7700ff;
-	opacity: 0.1;
-	z-index: 999;
-}
-
 .tile {
 	width: 97vw;
 	height: 95vh;
@@ -29,9 +20,13 @@ body {
 	/*background-image: url(https://pbs.twimg.com/media/CvS_EE7XYAEFC_E.jpg:large);*/
 	background-position: center;
 	background-size: cover;
-	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+	-webkit-transition: all 0.1s linear;
 	transition: all 0.1s linear; 
-	transform-origin: center 50% 0px;
+	-webkit-transform-origin: center 50% 0px; 
+	    -ms-transform-origin: center 50% 0px; 
+	        transform-origin: center 50% 0px;
 	/*box-shadow: 0px 0px 50px black;*/
 
 }
@@ -42,8 +37,56 @@ body {
 	font-size: 50px;
 	text-align: center;
 	font-weight: bolder;
-	transform: translateZ(30px);
+	-webkit-transform: translateZ(30px);
+	        transform: translateZ(30px);
 	/*transition: all 3s;*/
 	padding: 200px;
 	text-shadow: 1px 1px 20px black;
+}
+
+
+
+
+
+.swiper-container {
+    width: 100%;
+    height: 48vh;
+    overflow: hidden;
+}
+
+.swiper-container .swiper-slide {
+
+	/*background-image: url(https://pbs.twimg.com/media/Cvb0NgqXgAQ1fRq.jpg:large);*/
+	background-position: top ;
+	background-size: auto 200%;
+	/*background-color: #343454;*/
+	backface-visibility: hidden;
+} 
+
+.swiper-container1 {
+    width: 100%;
+    height: 48vh;
+    overflow: hidden;
+}
+
+.swiper-container1 .swiper-slide {
+	background-position: bottom ;
+	background-size: auto 200%;
+	backface-visibility: hidden;
+}
+
+#slide1 {
+	/*background-image: url(http://i.imgur.com/d8fwfxf.png);*/
+}
+
+#slide2 {
+	background-image: url(http://s1.hostingkartinok.com/uploads/images/2014/06/694ea914eba8a6cc8ecb2ea27f969111.jpg);
+}
+
+#slide3 {
+	background-image: url(http://i.wp-b.com/media/2015-10-17/vBFEgMUvEc.jpg);
+}
+
+#slide4 {
+	background-image: url(http://flashwallpapers.com/wp-content/uploads/2015/10/Evening-Reflections-1366x768.jpg);
 }
